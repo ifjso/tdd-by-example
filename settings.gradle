@@ -1,0 +1,4 @@
+rootProject.name = 'tdd-by-example'
+
+include 'multiple-currency'
+
