@@ -2,6 +2,7 @@ package com.js;
 
 public abstract class Money {
 
+  protected String currency;
   protected int amount;
 
   static Money dollar(int amount) {
@@ -14,7 +15,9 @@ public abstract class Money {
 
   abstract Money times(int multiplier);
 
-  abstract String currency();
+  String currency() {
+    return currency;
+  }
 
   public boolean equals(Object object) {
     Money money = (Money) object;
