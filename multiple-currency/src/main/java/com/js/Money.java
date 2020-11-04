@@ -1,6 +1,6 @@
 package com.js;
 
-public abstract class Money {
+public class Money {
 
   protected String currency;
   protected int amount;
@@ -18,7 +18,9 @@ public abstract class Money {
     return new Franc(amount, "CHF");
   }
 
-  abstract Money times(int multiplier);
+  Money times(int multiplier) {
+    return null;
+  }
 
   String currency() {
     return currency;
