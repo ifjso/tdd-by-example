@@ -18,16 +18,17 @@ public class Money implements Expression {
     return new Money(amount, "CHF");
   }
 
-  Money times(int multiplier) {
+  String currency() {
+    return currency;
+  }
+
+  Expression times(int multiplier) {
     return new Money(amount * multiplier, currency);
   }
 
-  Expression plus(Money addend) {
+  @Override
+  public Expression plus(Expression addend) {
     return new Sum(this, addend);
-  }
-
-  String currency() {
-    return currency;
   }
 
   @Override
